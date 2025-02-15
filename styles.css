@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F3F2EC;
+  color: #79253D;
+  font-family: 'Caudex', serif;
+  text-align: center;
+}
+
+header {
+background-color: #79253D;
+color: #F3F2EC;
+padding: 15px;
+font-size: 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+width: 100%;
+top: 0; /* Initially visible */
+left: 0;
+z-index: 1000;
+transition: top 0.3s ease-in-out; /* Smooth hide/show transition */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.header-container {
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.site-title {
+flex-grow: 1; /* Allows the title to take up space */
+text-align: center; /* Centers the text */
+margin-left: 50px;
+}
+
+.menu-btn {
+  border: 1px solid #F3F2EC;
+  font-family: 'Caudex', serif;
+  border-radius: 100px;
+  padding: 8px 15px;
+  margin-right: 50px;
+  cursor: pointer;
+  background: transparent;
+  color: #F3F2EC;
+  font-size: 18px;
+}
+
+
+.menu-btn:hover {
+  background-color: #F3F2EC;
+  color: #79253D;
+}
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #79253D;
+  color: white;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+  padding-top: 60px;
+  right: -250px; /* Initially hidden on the right */
+  transition: right 0.4s ease-in-out;
+  z-index: 1100;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #F3F2EC;
+  color: #79253D;
+}
+
+.sidebar-links {
+ padding-top: 20px;
+}
+
+/* Close Button - Now Centered */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  padding: 5px 12px;
+  border-radius: 100px;
+  color: white;
+  font-family: 'Caudex', serif;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: #79253D;
+}
+
+
+/* Overlay (Dimming Effect) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Active Classes */
+.sidebar.show {
+  right: 0;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.content {
+margin-top: 70px; /* Ensures content starts below the fixed header */
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+
+
+
+
+
+h1 {
+  font-size: 78px; /* Adjust size as needed */
+  margin-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
+  white-space: nowrap; /* Prevents the text from breaking into two lines */
+  overflow: hidden; /* Prevents content overflow */
+  text-overflow: ellipsis; /* Ensures overflow is handled gracefully */
+  width: 100%; /* Ensures it spans full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.middle-counter {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.countdown {
+font-size: 100px; /* Increase base font size */
+text-align: center;
+display: flex;
+flex-direction: column; /* Stack items in a column */
+font-weight: bold; /* Make text bold */
+}
+
+.countdown div {
+font-size: 59px; /* Increase font size for each row */
+color: #79253D; /* Match the theme color */
+text-align: left;
+}
+
+.petals-left {
+width: 275px;}
+
+.petals-right {
+width: 275px;}
+
+.flower-section {
+position: relative;
+width: 100%;
+height: 230px; /* Adjust the height as needed */
+background-color: #F3F2EC; /* Match the background */
+    overflow: hidden; /* Prevent overflow if necessary */
+    opacity: 1;
+transition: opacity 0.8s ease-out;
+}
+
+.flower-section-2{
+    position: relative;
+    width: 100%;
+    height: 230px; /* Adjust the height as needed */
+    background-color: #F3F2EC; /* Match the background */
+        overflow: hidden; /* Prevent overflow if necessary */
+        opacity: 1;
+    transition: opacity 0.8s ease-out;
+    }
+
+/* Make flower section fade out */
+.flower-section.hidden {
+opacity: 0;
+}
+
+
+/* Make flower section fade out */
+.flower-section-2.hidden {
+    opacity: 0;
+    }
+    
+.petals-image {
+    object-fit: contain;
+
+    position: absolute;
+    width: auto; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.9; /* Optional: Makes the images blend better */
+}
+
+.petals-image:nth-child(1) {
+    object-position: center;
+    top:0px;
+    left: 40%;
+    transform: rotate(0deg);
+    z-index: 1;
+}
+
+.petals-image:nth-child(2) {
+    top: 0px;
+    left:-10%;
+    transform: rotate(0deg);
+
+    z-index: 2;
+}
+
+.petals-image:nth-child(3) {
+    top: 0px;
+    left: 0%;
+    transform: rotate(0deg);
+
+    z-index: 3;
+}
+
+.petals-image:nth-child(4) {
+    top: 0px;
+    left: 10%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 4;
+}
+
+.petals-image:nth-child(5) {
+    top: 0px;
+    left: 20%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 5;
+}   
+
+.petals-image:nth-child(6) {
+    top: 0px;
+    left: 30%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 6;
+}   
+
+.petals-image:nth-child(7) {
+    top: 0px;
+    left: 50%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+.petals-image:nth-child(8) {
+    top: 0px;
+    left: 60%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(9) {
+    top: 0px;
+    left: 70%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(10) {
+    top: 0px;
+    left: 80%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(11) {
+    top: 0px;
+    left: 90%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+
+
+
+.path-right {
+
+}
+
+/* Default Layout: Image on Left, Text on Right */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    background-color: #F3F2EC;
+    gap: 100px;
+}
+
+.info-image {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.info-text {
+    text-align: right;
+    max-width: 600px;
+    color: #79253D;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.info-text h2 {
+    font-size: 28px;
+    color: #79253D;
+    margin-bottom: 20px;
+}
+
+/* Reverse Layout: Switch text and image order */
+.info-section.reverse {
+    flex-direction: row-reverse; /* Flip layout */
+}
+
+.info-section.reverse .info-text {
+    text-align: left; /* Align text to the left */
+}
+
+/* Initially hide images */
+.info-image {
+width: 400px;
+height: auto;
+border-radius: 100px;
+object-fit: cover;
+}
+
+/* Initially hidden */
+.info-image,
+.info-text {
+opacity: 0; /* Start fully invisible */
+transform: translateY(50px); /* Move slightly down */
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When they become visible */
+.info-image.show,
+.info-text.show {
+opacity: 1; /* Fully visible */
+transform: translateY(0); /* Move back to position */
+}
+
