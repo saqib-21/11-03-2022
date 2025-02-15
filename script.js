@@ -79,7 +79,6 @@
     window.addEventListener("scroll", revealImages);
     revealImages(); // Run on page load to check already visible elements
 });
-
 // Select elements
 const audioPlayer = document.getElementById("audioPlayer");
 const songTitle = document.getElementById("songTitle");
@@ -101,10 +100,9 @@ let songs = [
 ];
 
 let currentSongIndex = 0;
-let isPlaying = false; // Tracks if a song is playing
 
-/** Load song and auto-play if needed */
-function loadSong(index, autoPlay = false) {
+/** Load song but do NOT auto-play */
+function loadSong(index) {
     let song = songs[index];
 
     // Reset progress bar
@@ -118,15 +116,7 @@ function loadSong(index, autoPlay = false) {
         coverImage.src = song.cover;
     });
 
-    // If autoPlay is true, start playing the song immediately
-    if (autoPlay) {
-        audioPlayer.play();
-        updatePlayPauseButton(true);
-        isPlaying = true;
-    } else {
-        updatePlayPauseButton(false);
-        isPlaying = false;
-    }
+    updatePlayPauseButton(false); // Show play button initially
 }
 
 /** Play / Pause Toggle */
@@ -134,11 +124,9 @@ function togglePlay() {
     if (audioPlayer.paused) {
         audioPlayer.play();
         updatePlayPauseButton(true);
-        isPlaying = true;
     } else {
         audioPlayer.pause();
         updatePlayPauseButton(false);
-        isPlaying = false;
     }
 }
 
@@ -153,16 +141,16 @@ function updatePlayPauseButton(isPlaying) {
     }
 }
 
-/** Play Next Song and Auto-Play */
+/** Play Next Song but DO NOT Auto-Play */
 function nextSong() {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
-    loadSong(currentSongIndex, true); // Auto-play next song
+    loadSong(currentSongIndex);
 }
 
-/** Play Previous Song and Auto-Play */
+/** Play Previous Song but DO NOT Auto-Play */
 function prevSong() {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    loadSong(currentSongIndex, true); // Auto-play previous song
+    loadSong(currentSongIndex);
 }
 
 /** Update progress bar as song plays */
@@ -174,9 +162,9 @@ audioPlayer.addEventListener("timeupdate", () => {
     }
 });
 
-/** Auto-Play Next Song When Current Song Ends */
+/** When song ends, reset play button */
 audioPlayer.addEventListener("ended", () => {
-    nextSong(); // Automatically play next song when the current one ends
+    updatePlayPauseButton(false); // Show play button when song finishes
 });
 
 /** Seek to selected part of the song */
