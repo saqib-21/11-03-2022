@@ -89,14 +89,22 @@ const playPauseButton = document.getElementById("playPauseBtn");
 const playIcon = document.getElementById("playIcon"); // Play icon
 const pauseIcon = document.getElementById("pauseIcon"); // Pause icon
 
+
 // Define the playlist
 let songs = [
-    { title: "The Avatar's Love", artist: "Artist A", src: "SIDE A/1.The Avatar's Love.mp3", cover: "images/cover.jpg" },
-    { title: "Crew (feat. Brent Faiyaz & Shy Glizzy)", artist: "Artist B", src: "SIDE A/2.Crew (feat. Brent Faiyaz & Shy Glizzy).mp3", cover: "images/cover.jpg" },
-    { title: "Redbone", artist: "Artist B", src: "SIDE A/3.Redbone.mp3", cover: "images/cover.jpg" },
-    { title: "GRAVITY (FEAT. TYLER, THE CREATOR)", artist: "Artist B", src: "SIDE A/4.GRAVITY (FEAT. TYLER, THE CREATOR).mp3", cover: "images/cover.jpg" },
-    { title: "Best Part (feat. H.E.R.)", artist: "Artist B", src: "SIDE A/5.Best Part (feat. H.E.R.).mp3", cover: "images/cover.jpg" },
-    { title: "See You Again (feat. Kali Uchis)", artist: "Artist B", src: "SIDE A/6.See You Again (feat. Kali Uchis).mp3", cover: "images/cover.jpg" }
+    { title: "The Avatar's Love", artist: "SIDE A", src: "SIDE A/1.The Avatar's Love.mp3", cover: "images/cover.jpg" },
+    { title: "Crew (feat. Brent Faiyaz & Shy Glizzy)", artist: "SIDE A", src: "SIDE A/2.Crew (feat. Brent Faiyaz & Shy Glizzy).mp3", cover: "images/cover.jpg" },
+    { title: "Redbone", artist: "SIDE A", src: "SIDE A/3.Redbone.mp3", cover: "images/cover.jpg" },
+    { title: "GRAVITY (FEAT. TYLER, THE CREATOR)", artist: "SIDE A", src: "SIDE A/4.GRAVITY (FEAT. TYLER, THE CREATOR).mp3", cover: "images/cover.jpg" },
+    { title: "Best Part (feat. H.E.R.)", artist: "SIDE A", src: "SIDE A/5.Best Part (feat. H.E.R.).mp3", cover: "images/cover.jpg" },
+    { title: "See You Again (feat. Kali Uchis)", artist: "SIDE A", src: "SIDE A/6.See You Again (feat. Kali Uchis).mp3", cover: "images/cover.jpg" },
+    { title: "Cyanide", artist: "SIDE B", src: "SIDE B/7.CYANIDE.mp3", cover: "images/cover.jpg" },
+    { title: "All The Stars (with SZA)", artist: "SIDE B", src: "SIDE B/8.All The Stars (with SZA).mp3", cover: "images/cover.jpg" },
+    { title: "Prom", artist: "SIDE B", src: "SIDE B/9.Prom.mp3", cover: "images/cover.jpg" },
+    { title: "20 Something", artist: "SIDE B", src: "SIDE B/10.20 Something.mp3", cover: "images/cover.jpg" },
+    { title: "Ghost in the Machine (feat. Phoebe Bridgers)", artist: "SIDE B", src: "SIDE B/11.Ghost in the Machine (feat. Phoebe Bridgers).mp3", cover: "images/cover.jpg" },
+    { title: "Too Late", artist: "SIDE B", src: "SIDE B/12.Too Late.mp3", cover: "images/cover.jpg" }
+    // Add more songs as needed
 ];
 
 let currentSongIndex = 0;
