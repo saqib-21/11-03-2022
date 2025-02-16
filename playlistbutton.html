@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="music_styles.css">
+</head>
+
+
+<body>
+
+    
+  <!-- Header -->
+  <header>
+    <div class="site-title">Forever.com</div>
+    <button class="menu-btn" onclick="openSidebar()">Menu</button>
+  </header>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="closeSidebar()">Close</button>
+        <div class="sidebar-links">
+        <a href="index.html">Home</a>
+        <a href="playlist.html">Playlist</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="coupons.html">Coupons</a>
+        <a href="messages.html">Messages</a>
+    </div>
+  </div>
+
+    <main class="content">
+
+    <img src="images/dance.gif" alt="dance" class="gif1">
+
+    <div class="music-player">
+        <div class="album-art">
+            <img id="coverImage" src="images/cover.jpg" alt="Album Art">
+        </div>
+        <div class="song-info">
+            <p id="songTitle">Select a song</p>
+            <p id="artistName">Artist Name</p>
+        </div>
+        <audio id="audioPlayer" src=""></audio>
+    
+        <div class="controls">
+            <button class="music-btn" onclick="prevSong()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M11 12L20 5V19L11 12ZM4 5V19H6V5H4Z"/>
+                </svg>
+            </button>
+    
+            <button id="playPauseBtn" class="music-btn" onclick="togglePlay()">
+                <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+                <svg id="pauseIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M6 5h4v14H6zm8 0h4v14h-4z"/>
+                </svg>
+            </button>
+            
+            <button class="music-btn" onclick="nextSong()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M4 5v14l11-7L4 5zm16 0h-2v14h2V5z"/>
+                </svg>
+            </button>
+        </div>
+    
+        <input type="range" id="progressBar" value="0">
+    </div>
+
+    <img src="images/milk-and-mocha-music.gif" alt="dance" class="gif">
+
+
+</main>    
+    
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+
+    <script src="script.js"></script>
+
+    
+</body>
+</html>

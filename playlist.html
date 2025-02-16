@@ -30,60 +30,32 @@
   </div>
 
     <main class="content">
-
-    <img src="images/dance.gif" alt="dance" class="gif1">
-
-    <div class="music-player">
-        <div class="album-art">
-            <img id="coverImage" src="images/cover.jpg" alt="Album Art">
-        </div>
-        <div class="song-info">
-            <p id="songTitle">Select a song</p>
-            <p id="artistName">Artist Name</p>
-        </div>
-        <audio id="audioPlayer" src=""></audio>
-    
-        <div class="controls">
-            <button class="music-btn" onclick="prevSong()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M11 12L20 5V19L11 12ZM4 5V19H6V5H4Z"/>
-                </svg>
-            </button>
-    
-            <button id="playPauseBtn" class="music-btn" onclick="togglePlay()">
-                <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                </svg>
-                <svg id="pauseIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M6 5h4v14H6zm8 0h4v14h-4z"/>
-                </svg>
-            </button>
-            
-            <button class="music-btn" onclick="nextSong()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path d="M4 5v14l11-7L4 5zm16 0h-2v14h2V5z"/>
-                </svg>
-            </button>
-        </div>
-    
-        <input type="range" id="progressBar" value="0">
-    </div>
-
-    <img src="images/milk-and-mocha-music.gif" alt="dance" class="gif">
-
+        <a href="playlistbutton.html" class="slider-link">
+            <div class="slider">
+                <div class="wrapper">
+                    <div class="record-wrapper">
+                    <div class='record'></div>
+                    </div>
+                    <div class="record-case">
+                    <div class="image"></div>
+                    </div>
+                </div>
+                </div>
+            </a>
 
 </main>
-    
-    <div class="slider">
-        <div class="wrapper">
-            <div class="record-wrapper">
-            <div class='record'></div>
-            </div>
-            <div class="record-case">
-            <div class="image"></div>
-            </div>
-        </div>
-        </div>
+
+<div class="music-info-section">
+    <div class="info-text">
+      <h2>Hover over our playlist</h2>
+      <p>
+        I created this playlist for you last year so you can play it on your vinyl record player. However, it's hard to cary around a 
+        record player, so I made it digital for you. Enjoyyyy.
+      </p>
+    </div>
+
+
+
     
         
 
@@ -97,3 +69,4 @@
     
 </body>
 </html>
+
