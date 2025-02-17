@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
 
-html, body {
-  margin: 0;
-  padding-left: 0px;
-  width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-
 body {
   margin: 0;
   padding: 0;
@@ -16,9 +8,6 @@ body {
   font-family: 'Caudex', serif;
   text-align: center;
 }
-
-
-
 
 header {
 background-color: #79253D;
@@ -38,8 +27,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 
-
-
 .header-container {
 display: flex;
 width: 100%;
@@ -48,13 +35,11 @@ align-items: center;
 padding: 0 20px;
 }
 
-
 .site-title {
 flex-grow: 1; /* Allows the title to take up space */
 text-align: center; /* Centers the text */
 margin-left: 75px;
 }
-
 
 .menu-btn {
   border: 1px solid #F3F2EC;
@@ -69,14 +54,10 @@ margin-left: 75px;
 }
 
 
-
-
 .menu-btn:hover {
   background-color: #F3F2EC;
   color: #79253D;
 }
-
-
 
 
 /* Sidebar */
@@ -94,7 +75,6 @@ margin-left: 75px;
   z-index: 1100;
 }
 
-
 .sidebar a {
   display: block;
   padding: 15px;
@@ -105,17 +85,14 @@ margin-left: 75px;
   transition: 0.3s;
 }
 
-
 .sidebar a:hover {
   background-color: #F3F2EC;
   color: #79253D;
 }
 
-
 .sidebar-links {
  padding-top: 20px;
 }
-
 
 /* Close Button - Now Centered */
 .close-btn {
@@ -133,13 +110,10 @@ margin-left: 75px;
   font-family: 'Caudex', serif;
 }
 
-
 .close-btn:hover {
   background-color: white;
   color: #79253D;
 }
-
-
 
 
 /* Overlay (Dimming Effect) */
@@ -156,12 +130,10 @@ margin-left: 75px;
   z-index: 1000;
 }
 
-
 /* Active Classes */
 .sidebar.show {
   right: 0;
 }
-
 
 .overlay.show {
   visibility: visible;
@@ -180,6 +152,8 @@ gap: 20px;
 
 
 
+
+
 h1 {
   font-size: 78px; /* Adjust size as needed */
   margin-bottom: 10px;
@@ -194,27 +168,22 @@ h1 {
   align-items: center;
 }
 
-
 h2 {
   font-size: 40px;
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-
 h3 {
   font-size: 20px;
   margin-top: 20px;
 }
-
 
 .middle-counter {
 display: flex;
 justify-content: center;
 align-items: center;
 }
-
-
 
 
 .countdown {
@@ -225,46 +194,159 @@ flex-direction: column; /* Stack items in a column */
 font-weight: bold; /* Make text bold */
 }
 
-
 .countdown div {
 font-size: 59px; /* Increase font size for each row */
 color: #79253D; /* Match the theme color */
 text-align: left;
 }
 
-
 .petals-left {
 width: 275px;}
-
 
 .petals-right {
 width: 275px;}
 
-
-
-
-footer {
-  background-image: url('images/test4.png'); /* Replace with your image URL */
-  background-size:auto; /* Ensures the image covers the footer */
-  background-position: center; /* Centers the image */
-  height: 400px; /* Adjust as needed */
-  color: white; /* Ensures text is visible */
-  text-align: center;
-  padding: 20px;
-  transition: opacity 0.6s ease-out;
-
+.flower-section {
+position: relative;
+width: 100%;
+height: 230px; /* Adjust the height as needed */
+background-color: #F3F2EC; /* Match the background */
+    overflow: hidden; /* Prevent overflow if necessary */
+    opacity: 1;
+transition: opacity 0.8s ease-out;
 }
 
-/* When hidden, make footer disappear */
-footer.hidden {
-  opacity: 0;
-  pointer-events: none; /* Prevents interactions when hidden */
+.flower-section-2{
+    position: relative;
+    width: 100%;
+    height: 230px; /* Adjust the height as needed */
+    background-color: #F3F2EC; /* Match the background */
+        overflow: hidden; /* Prevent overflow if necessary */
+        opacity: 1;
+    transition: opacity 0.8s ease-out;
+    }
+
+/* Make flower section fade out */
+.flower-section.hidden {
+opacity: 0;
+}
+
+
+/* Make flower section fade out */
+.flower-section-2.hidden {
+    opacity: 0;
+    }
+    
+.petals-image {
+    object-fit: contain;
+
+    position: absolute;
+    width: auto; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.9; /* Optional: Makes the images blend better */
+}
+
+.petals-image:nth-child(1) {
+    object-position: center;
+    top:0px;
+    left: 40%;
+    transform: rotate(0deg);
+    z-index: 1;
+}
+
+.petals-image:nth-child(2) {
+    top: 0px;
+    left:-10%;
+    transform: rotate(0deg);
+
+    z-index: 2;
+}
+
+.petals-image:nth-child(3) {
+    top: 0px;
+    left: 0%;
+    transform: rotate(0deg);
+
+    z-index: 3;
+}
+
+.petals-image:nth-child(4) {
+    top: 0px;
+    left: 10%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 4;
+}
+
+.petals-image:nth-child(5) {
+    top: 0px;
+    left: 20%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 5;
+}   
+
+.petals-image:nth-child(6) {
+    top: 0px;
+    left: 30%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 6;
+}   
+
+.petals-image:nth-child(7) {
+    top: 0px;
+    left: 50%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+.petals-image:nth-child(8) {
+    top: 0px;
+    left: 60%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(9) {
+    top: 0px;
+    left: 70%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(10) {
+    top: 0px;
+    left: 80%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
+}
+
+.petals-image:nth-child(11) {
+    top: 0px;
+    left: 90%;
+    transform: rotate(0deg);
+    object-fit: cover;
+
+    z-index: 7;
 }
 
 
 
 
+.path-right {
 
+}
 
 /* Default Layout: Image on Left, Text on Right */
 .info-section {
@@ -276,14 +358,12 @@ footer.hidden {
     gap: 100px;
 }
 
-
 .info-image {
     width: 400px;
     height: auto;
     border-radius: 15px;
     object-fit: cover;
 }
-
 
 .info-text {
     text-align: right;
@@ -293,24 +373,20 @@ footer.hidden {
     line-height: 1.6;
 }
 
-
 .info-text h2 {
     font-size: 28px;
     color: #79253D;
     margin-bottom: 20px;
 }
 
-
 /* Reverse Layout: Switch text and image order */
 .info-section.reverse {
     flex-direction: row-reverse; /* Flip layout */
 }
 
-
 .info-section.reverse .info-text {
     text-align: left; /* Align text to the left */
 }
-
 
 /* Initially hide images */
 .info-image {
@@ -320,7 +396,6 @@ border-radius: 100px;
 object-fit: cover;
 }
 
-
 /* Initially hidden */
 .info-image,
 .info-text {
@@ -329,7 +404,6 @@ transform: translateY(50px); /* Move slightly down */
 transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-
 /* When they become visible */
 .info-image.show,
 .info-text.show {
@@ -337,57 +411,50 @@ opacity: 1; /* Fully visible */
 transform: translateY(0); /* Move back to position */
 }
 
-
-/* Mobile adjustments for screens smaller than 768px */
-@media (max-width: 768px) {
-
-  /* Adjust content layout */
-  .content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 10px;
+/* Gallery Slider Styles */
+.gallery-container {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: 120px auto 40px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
-
-  /* Resize title and countdown text */
-  h1 {
-      font-size: 40px; /* Reduce size */
+  
+  .slider {
+    overflow: hidden;
+    width: 100%;
   }
-
-  h2 {
-      font-size: 30px;
+  
+  .slides {
+    display: flex;
+    gap: 20px;
   }
-
-  .countdown div {
-      font-size: 40px; /* Scale down */
+  
+  .slides img {
+    width: 100%;
+    border-radius: 10px;
   }
-
-  /* Resize petal images */
-  .petals-left, .petals-right {
-      width: 50%;
-      max-width: 150px;
+  
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+    border-radius: 50%;
   }
-
- 
-
-  /* Make the info sections stack */
-  .info-section,
-  .info-section.reverse {
-      flex-direction: column;
-      text-align: center;
-      gap: 30px;
-      padding: 40px 20px; /* Reduce padding */
+  
+  .prev-btn { left: 10px; }
+  .next-btn { right: 10px; }
+  
+  .prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
   }
-
-  .info-image {
-      width: 80%; /* Make images scale well */
-      max-width: 300px; /* Prevent them from getting too large */
-  }
-
-  .info-text {
-      text-align: center;
-      max-width: 90%;
-  }
-
-
-}
+  

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Forever.com</title>
+    <link rel="stylesheet" href="gallerystyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
 </head>
 <body>
 
-    
   <!-- Header -->
   <header>
     <div class="site-title">Forever.com</div>
@@ -27,12 +28,23 @@
     </div>
   </div>
 
-  
-    <!-- Overlay -->
-    <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closeSidebar()"></div>
 
-    <script src="script.js"></script>
+  <!-- Custom GSAP Slider -->
+  <div class="gallery-container">
+    <div class="slider">
+      <div class="slides">
+        <img src="images/Black Melancholy Album Cover.png" alt="Slide 1">
+        <img src="images/cover.jpg" alt="Slide 2">
+        <img src="images/IMG_5337.JPEG" alt="Slide 3">
+        <img src="images/Red-Rose-Petals-Transparent.png" alt="Slide 4">
+      </div>
+    </div>
+    <button class="prev-btn">❮</button>
+    <button class="next-btn">❯</button>
+  </div>
 
-    
+  <script src="gallery.js"></script>
 </body>
 </html>
