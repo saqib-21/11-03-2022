@@ -24,6 +24,7 @@
         document.getElementById("hours").innerHTML = `${hours} Hours`;
         document.getElementById("minutes").innerHTML = `${minutes} Minutes`;
         document.getElementById("seconds").innerHTML = `${seconds} Seconds`;
+        document.getElementById('whole').innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
     }
 
     // Initialize timer
@@ -50,7 +51,7 @@
    // Reveal elements on scroll
 
    document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".info-image , .info-text");
+    const images = document.querySelectorAll(".info-image , .info-text,.end-text , .bottom-image");
     const flowerSection = document.querySelector("footer");
 
 

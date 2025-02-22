@@ -173,9 +173,9 @@ h1 {
   transform-style: preserve-3d;
   transition: transform 0.999s;
 }
-
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.card:hover .card-inner,
+.card:active .card-inner {
+    transform: rotateY(180deg);
 }
 
 .card-front,
@@ -188,7 +188,7 @@ h1 {
 
 .card-front {
   background-color: #3f0d12;
-background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
+  background-image: linear-gradient(315deg, #3f0d12 0%, #a71d31 74%);
 
   color: #fff;
   display: flex;
