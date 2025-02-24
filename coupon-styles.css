@@ -172,6 +172,7 @@ h1 {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.999s;
+
 }
 .card:hover .card-inner,
 .card:active .card-inner {
