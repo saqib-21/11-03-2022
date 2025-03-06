@@ -8,7 +8,7 @@
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents repeating */
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
-    color: #79253D;
+    color: #800326;
     font-family: 'Caudex', serif;
     text-align: center;
   }
@@ -17,14 +17,14 @@
     margin: 0;
     padding: 0;
     background-color: #f3ecf2;
-    color: #79253D;
+    color: #800326;
     font-family: 'Caudex', serif;
     text-align: center;
   }
   
   
 header {
-    background-color: #79253D;
+    background-color: #800326;
     color: #F3F2EC;
     padding: 15px;
     font-size: 15px;
@@ -70,7 +70,7 @@ header {
     
     .menu-btn:hover {
       background-color: #F3F2EC;
-      color: #79253D;
+      color: #800326;
     }
     
     
@@ -80,7 +80,7 @@ header {
       top: 0;
       width: 250px;
       height: 100%;
-      background-color: #79253D;
+      background-color: #800326;
       color: white;
       box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
       padding-top: 60px;
@@ -101,7 +101,7 @@ header {
     
     .sidebar a:hover {
       background-color: #F3F2EC;
-      color: #79253D;
+      color: #800326;
     }
     
     .sidebar-links {
@@ -126,7 +126,7 @@ header {
     
     .close-btn:hover {
       background-color: white;
-      color: #79253D;
+      color: #800326;
     }
     
     
@@ -371,7 +371,7 @@ header {
 .song-info {
     margin: 10px 0;
     font-family: 'Caudex', serif;
-    color: #79253D;
+    color: #800326;
     font-size: 16px;
 }
 
@@ -390,13 +390,13 @@ header {
     padding: 10px;
     cursor: pointer;
     background: #F3F2EC;
-    color: #79253D;
+    color: #800326;
     font-size: 18px;
     transition: all 0.3s ease-in-out;
 }
 
 .music-btn:hover {
-    background-color: #79253D;
+    background-color: #800326;
     color: #F3F2EC;
 }
 
@@ -470,7 +470,7 @@ header {
 .info-text {
     text-align: center;
     max-width: 600px;
-    color: #79253D;
+    color: #800326;
     font-size: 20px;
     line-height: 1.6;
 }

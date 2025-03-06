@@ -1,83 +1,64 @@
-new Vue({
-    el: "#app",
-    data() {
-      return {
-        isOpenedTop: true,
-        items: [
-          {
-            img1: "images/beach1.jpg",
-            img2: "images/beach2.jpg",
-            img3: "images/beach3.jpg",
-            title: "BEACH",
-            isOpen: false,
-          },
-          {
-            img1: "images/adventure1.jpg",
-            img2: "images/adventure2.jpg",
-            img3: "images/adventure3.jpg",
-            title: "ADVENTURE",
-            isOpen: false,
-          },
-          {
-            img1: "images/museum1.jpg",
-            img2: "images/museum2.jpg",
-            img3: "images/museum3.jpg",
-            title: "MUSEUM",
-            isOpen: false,
-          },
-          {
-            img1: "images/aquarium1.jpg",
-            img2: "images/aquarium2.jpg",
-            img3: "images/aquarium3.jpg",
-            title: "AQUARIUM",
-            isOpen: false,
-          },
-          {
-            img1: "images/aurora1.jpg",
-            img2: "images/aurora2.jpg",
-            img3: "images/aurora3.jpg",
-            title: "AURORA",
-            isOpen: false,
-          },
-          {
-            img1: "images/sky1.jpg",
-            img2: "images/sky2.jpg",
-            img3: "images/sky3.jpg",
-            title: "SKY",
-            isOpen: false,
-          },
-          {
-            img1: "images/sky1.jpg",
-            img2: "images/sky2.jpg",
-            img3: "images/sky3.jpg",
-            title: "SKY",
-            isOpen: false,
-          },
-          {
-            img1: "images/sky1.jpg",
-            img2: "images/sky2.jpg",
-            img3: "images/sky3.jpg",
-            title: "SKY",
-            isOpen: false,
-          },
+function openSidebar() {
+  document.getElementById("sidebar").classList.add("show");
+  document.getElementById("overlay").classList.add("show");
+}
 
-        ],
-      };
-    },
-    methods: {
-      topOpen() {
-        this.isOpenedTop = !this.isOpenedTop;
-      },
-  
-      open(idx, isOpen) {
-        if (this.isOpenedTop) {
-          this.items[idx].isOpen = !isOpen;
-        }
-      },
-  
-      reset() {
-        this.items.forEach((item) => (item.isOpen = false));
-        this.isOpenedTop = false;
-      },
-    },
-  });
+function closeSidebar() {
+  document.getElementById("sidebar").classList.remove("show");
+  document.getElementById("overlay").classList.remove("show");
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const messages = [
+      "I LOVE YOU!",
+      "You are amazing!",
+      "Keep pushing forward!",
+      "Today is your day!",
+      "Believe in yourself!",
+      "The best is yet to come!",
+      "Never stop dreaming!",
+      "Every moment is a fresh beginning."
+  ];
+
+  const images = [
+      "images/butterfly (1).JPG",
+  ];
+
+  let lastContent = null; // Stores the last displayed message/image
+  let isLetterOpen = false; // Tracks whether the letter is open
+
+  function getRandomContent() {
+      if (isLetterOpen) return; // If the letter is already open, don't change it!
+
+      const letterContent = document.getElementById("letterContent");
+      letterContent.innerHTML = ""; // Clear previous content
+
+      let newContent;
+      do {
+          const isText = Math.random() < 0.5;
+          if (isText) {
+              newContent = messages[Math.floor(Math.random() * messages.length)];
+              letterContent.textContent = newContent;
+          } else {
+              const randomImage = images[Math.floor(Math.random() * images.length)];
+              newContent = `<img src="${randomImage}" alt="Random Image" style="width: 100%;">`;
+              letterContent.innerHTML = newContent;
+          }
+      } while (newContent === lastContent); // Ensure it's different from the last one
+
+      lastContent = newContent; // Store new content
+      isLetterOpen = true; // Mark the letter as opened
+  }
+
+  function closeLetter() {
+      isLetterOpen = false; // Allow new content when reopened
+  }
+
+  const letterImage = document.querySelector(".letter-image");
+
+  // Open on hover or click, but only set content once per opening
+  letterImage.addEventListener("mouseenter", getRandomContent);
+  letterImage.addEventListener("click", getRandomContent);
+
+  // Reset when the letter closes (mouse leaves)
+  letterImage.addEventListener("mouseleave", closeLetter);
+});

@@ -4,13 +4,13 @@ body {
   margin: 0;
   padding: 0;
   background-color:  #f3ecf2;
-  color: #79253D;
+  color: #800326;
   font-family: 'Caudex', serif;
   text-align: center;
 }
 
 header {
-background-color: #79253D;
+background-color: #800326;
 color: #F3F2EC;
 padding: 15px;
 font-size: 15px;
@@ -56,7 +56,7 @@ margin-left: 75px;
 
 .menu-btn:hover {
   background-color: #F3F2EC;
-  color: #79253D;
+  color: #800326;
 }
 
 
@@ -66,7 +66,7 @@ margin-left: 75px;
   top: 0;
   width: 250px;
   height: 100%;
-  background-color: #79253D;
+  background-color: #800326;
   color: white;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
   padding-top: 60px;
@@ -87,7 +87,7 @@ margin-left: 75px;
 
 .sidebar a:hover {
   background-color: #F3F2EC;
-  color: #79253D;
+  color: #800326;
 }
 
 .sidebar-links {
@@ -112,7 +112,7 @@ margin-left: 75px;
 
 .close-btn:hover {
   background-color: white;
-  color: #79253D;
+  color: #800326;
 }
 
 
@@ -199,10 +199,10 @@ margin-left: 75px;
   background: #d4d3d3;
 }
 .album__paper:nth-of-type(1) .back {
-  background: #79253D
+  background: #800326
 }
 .album__paper:nth-of-type(1) .album__page {
-  background: #79253D
+  background: #800326
 }
 .album__paper.open {
   box-shadow: 0 1em 0 0 #aaa;
@@ -250,7 +250,7 @@ margin-left: 75px;
 .album__back {
   width: 3em;
   height: 700px;
-  background: #79253D;
+  background: #800326;
   position: absolute;
   left: -3em;
   top: 0;
@@ -315,7 +315,7 @@ margin-left: 75px;
 .content__img1 img {
   margin: auto;
   width: 90%;
-  border: 10px solid #79253D;
+  border: 10px solid #800326;
   box-sizing: border-box;
 }
 .content__img2 {
@@ -328,7 +328,7 @@ margin-left: 75px;
 .content__img2 img {
   margin: auto;
   width: 80%;
-  border: 10px solid #79253D;
+  border: 10px solid #800326;
   box-sizing: border-box;
 }
 .content__img3 {
@@ -341,7 +341,7 @@ margin-left: 75px;
 .content__img3 img {
   margin: auto;
   width: 60%;
-  border: 10px solid #79253D;
+  border: 10px solid #800326;
   box-sizing: border-box;
 }
 .content__text {

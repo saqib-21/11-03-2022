@@ -55,6 +55,91 @@ function openSidebar() {
             isOpen: false,
           },
           {
+            img1: "images/dinner (1).JPG",
+            img2: "images/dinner (2).JPG",
+            img3: "images/dinner (1) (1).jpg",
+            title: "Dinner Date",
+            isOpen: false,
+          },
+          {
+            img1: "images/breakfast (1).JPG",
+            img2: "images/breakfast (3).JPG",
+            img3: "images/breakfast (2).JPG",
+            title: "Cafe Date",
+            isOpen: false,
+          },
+          {
+            img1: "images/school (3).JPG",
+            img2: "images/school (1).JPG",
+            img3: "images/school (2).JPG",
+            title: "Back to School Date",
+            isOpen: false,
+          },
+          {
+            img1: "images/christmas.png",
+            img3: "images/christsmax.jpg",
+            img2: "images/DSCF2641 2lol.JPG",
+            title: "Christmassss",
+            isOpen: false,
+          },
+          {
+            img1: "images/IMG_1567.jpg",
+            img3: "images/raptors (1).JPG",
+            img2: "images/raptors (2).JPG",
+            title: "Raptors Game",
+            isOpen: false,
+          },
+        ],
+      };
+    },
+    methods: {
+      topOpen() {
+        this.isOpenedTop = !this.isOpenedTop;
+      },
+  
+      open(idx, isOpen) {
+        if (this.isOpenedTop) {
+          this.items[idx].isOpen = !isOpen;
+        }
+      },
+  
+      reset() {
+        this.items.forEach((item) => (item.isOpen = false));
+        this.isOpenedTop = false;
+      },
+    },
+  });
+
+  /*
+//////////////////////////
+  new Vue({
+    el: "#app2",
+    data() {
+      return {
+        isOpenedTop: false,
+        items: [
+          {
+            img3: "images/IMG_5176tulip (2).JPEG",
+            img2: "images/IMG_5176tulip (3).JPEG",
+            img1: "images/IMG_5337.JPEG",
+            title: "Tulip Date",
+            isOpen: false,
+          },
+          {
+            img1: "images/IMG_6004.JPG",
+            img2: "images/IMG_6382.JPG",
+            img3: "images/IMG_6384.JPG",
+            title: "Greenhouse Date",
+            isOpen: false,
+          },
+          {
+            img1: "images/butterfly.jpg",
+            img2: "images/butterfly (1).JPG",
+            img3: "images/butterfly (2).JPG",
+            title: "Butterfly Date",
+            isOpen: false,
+          },
+          {
             img1: "images/IMG_9174.jpg",
             img2: "images/IMG_5337.JPEG",
             img3: "images/IMG_5666.JPG",
@@ -108,5 +193,4 @@ function openSidebar() {
         this.isOpenedTop = false;
       },
     },
-  });
-
+  });*/
