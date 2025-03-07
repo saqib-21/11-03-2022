@@ -14,13 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
       "Keep pushing forward!",
       "Today is your day!",
       "Believe in yourself!",
-      "The best is yet to come!",
-      "Never stop dreaming!",
-      "Every moment is a fresh beginning."
-  ];
+      "I am proud of you!",
+      "You are loved!",
+      "You are beautiful!",
+      "You are strong!",
+      "I MISS YOU!",
+      "I am always here for you!",
+      "Mwwwwah!",
+      ];
 
   const images = [
-      "images/butterfly (1).JPG",
+      "images/gif-1.gif",
+      "images/gif-2.gif",
+      "images/gif-3.gif",
+      "images/gif-4.gif",
+      "images/6-ticket.png",
+
   ];
 
   let lastContent = null; // Stores the last displayed message/image
