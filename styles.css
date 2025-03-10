@@ -330,17 +330,8 @@ object-fit: cover;
 
 
 
-/* Initially hide images */
-.bottom-image {
-  width: 400px;
-  height: 500px;
-  border-radius: 100px;
-  object-fit: cover;
-  }
-
 
 /* Initially hidden */
-.bottom-image,
 .end-text,
 .info-image,
 .info-text {
